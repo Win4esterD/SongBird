@@ -1,0 +1,70 @@
+.welcome{
+    position: relative;
+    width: 737px;
+    height: 768px;
+    background: rgba(0, 0, 0, 0.7);
+    border-radius: 60px;
+    left: 998px;
+    top: 31px;
+}
+
+.welcome__h1{
+    width: 594px;
+    height: 116px;
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 45px;
+    line-height: 53px;
+    text-align: center;
+    color: #FFFFFF;
+    padding: 62px 0 0 57px;
+}
+
+.game{
+    color: rgba(225, 229, 23, 1);
+}
+
+.welcome__p{
+    margin-left: 105px;
+    width: 546px;
+    height: 301px;
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 34px;
+    line-height: 40px;
+    text-align: justify;
+    color: #FFFFFF;
+}
+
+.play-btn{
+    position: relative;
+    width: 394px;
+    height: 103px;
+    background: #FF9901;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 60px;
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 45px;
+    line-height: 53px;
+    text-align: center;
+    color: #FFFFFF;
+    bottom: 200px;
+    left: 180px
+}
+
+.play-btn:hover{
+    cursor: pointer;
+    background: rgb(14, 228, 14);
+}
+
+.play-btn:active{
+    background: rgb(230, 227, 9);
+}
+
+.return{
+    position: absolute;
+}

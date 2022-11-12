@@ -10,8 +10,9 @@
     <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="assets/styles/header.css">
     <link rel="stylesheet" href="assets/styles/main.css">
-    <link rel="stylesheet" href="assets/styles/index.css">
+    <!-- <link rel="stylesheet" href="assets/styles/index.css"> -->
     <link rel="stylesheet" href="assets/styles/footer.css">
+    <link rel="stylesheet" href="assets/styles/results.css">
 </head>
 <body>
     <header class="header">
@@ -20,21 +21,19 @@
         </div>
         <nav class="nav">
             <ul class="nav-ul">
-                <li class="nav-ul__li"><a class="nav-ul__li__a" id="active" href="index.html">Главная страница</a></li>
+                <li class="nav-ul__li"><a class="nav-ul__li__a" href="index.html">Главная страница</a></li>
                 <li class="nav-ul__li"><a class="nav-ul__li__a" href="game.html">Викторина</a></li>
-                <li class="nav-ul__li"><a class="nav-ul__li__a" href="results.html">Результаты</a></li>
+                <li class="nav-ul__li"><a class="nav-ul__li__a" id="active" href="results.html">Результаты</a></li>
             </ul>
         </nav>
     </header>
     <main class="main">
         <section class="welcome">
             <h1 class="welcome__h1">
-                Добро пожаловать в игру <span class="game">Song Bird!</span>
+                Результаты:
             </h1>
-            <p class="welcome__p">Вам предстоит отгадывать названия птиц прослушивая записи их голосов. 
-                Постарайтесь отгадать как можно больше названий птиц.</p>
-            <p class="welcome__p">Удачи!</p>
-            <button class="play-btn">ИГРАТЬ</в>
+            <p class="welcome__p">Вы отгадали <span>n</span> птиц из 6-и. Хотите попробовать ещё раз?</p>
+            <button class="play-btn return">ИГРАТЬ СНОВА</в>
         </section>
     </main>
     <footer class="footer">

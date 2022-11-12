@@ -1,0 +1,194 @@
+.game{
+    position: relative;
+    width: 1276px;
+    height: 765px;
+    background: #231E1E;
+    border-radius: 23px;
+    top: 23px;
+    left: 306px;
+}
+
+
+.menu{
+    display: flex;
+    gap: 15px;
+    padding-top: 27px;
+    
+}
+
+.menu__div{
+    width: 200px;
+    height: 40px;
+    background: #1EC069;
+    border-radius: 5px;
+}
+
+.menu__div:hover{
+    cursor: pointer;
+}
+
+#tab-now{
+    background: #FF8832;
+}
+
+#tab-now:hover{
+    cursor: unset;
+}
+
+.menu__p{
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 26px;
+    line-height: 33px;
+    text-align: center;
+    color: #FFFFFF;
+}
+
+.playside{
+    display: flex;
+    width: 1135px;
+    height: 232px;
+    background: #302828;
+    border-radius: 9px;
+    margin-top: 26px;
+    margin-left: 77px;
+}
+
+.bird-pic__img{
+    width: 300px;
+    height: 232px;
+    border-radius: 30px;
+}
+
+.player-block{
+    margin-left: 43px;
+}
+
+.player-block__p{
+    width: 125px;
+    height: 36px;
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 42px;
+    line-height: 49px;
+    text-align: center;
+    color: #FFFFFF;
+}
+
+.player-block__hr{
+    width: 696.43px;
+    height: 0px;
+    border: 2px solid #837C7C;
+}
+
+.player{
+    margin-top: 91px;
+    width: 696.43px;
+    color: black;
+}
+
+.points{
+    width: 103px;
+    height: 30px;
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 26px;
+    line-height: 30px;
+    text-align: center;
+    color: #FFFFFF;
+    margin: 14px 0 0 899px;
+}
+
+.wrapper{
+    display:flex;
+    margin: 15px 0 0 72px;
+    gap: 132px;
+}
+
+.wrapper__div{
+    width: 504px;
+    height: 359px;
+    background: #302828;
+    border-radius: 26px;
+}
+
+.options-wrapper{
+    display: flex;
+    flex-direction: column;
+    margin: 16px 0 0 38px;
+    gap: 11px;
+}
+
+.option{
+    width: 430px;
+    height: 40px;
+    background: #473A3A;
+    border: 3px solid #000000;
+    border-radius: 8px;
+}
+
+.option:hover{
+    cursor: pointer;
+    background: #594343;
+}
+
+.option:active{
+    background: #FF8832;
+}
+
+.option__p{
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 26px;
+    line-height: 30px;
+    text-align: center;
+    color: #FFFFFF;
+    padding-top: 4px;
+}
+
+.wrapper__p{
+    width: 329px;
+    height: 60px;
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 26px;
+    line-height: 30px;
+    text-align: center;
+    color: #FFFFFF;
+    margin: 26px 0 0 97px;
+}
+
+.next-lvl{
+    position: absolute;
+    width: 387px;
+    height: 40px;
+    background: #1EC069;
+    border-radius: 7px;
+    bottom: 52px;
+    margin-left: 74px;
+}
+
+.next-lvl:hover{
+    cursor: pointer;
+    background: #16db72;
+}
+
+.next-lvl:active{
+    background: #FF8832;
+}
+
+.next-lvl__p{
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 28px;
+    line-height: 33px;
+    text-align: center;
+    color: #FFFFFF;
+}
+
