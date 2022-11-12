@@ -19,3 +19,4 @@ burger.addEventListener('click', ()=>{
         nav.style.display = 'none'; 
     }
 })
+
