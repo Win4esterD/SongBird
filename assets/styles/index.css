@@ -70,3 +70,205 @@
         left: 49vw;
     }
 }
+
+@media(max-width: 1453px){
+    .welcome{
+        width: 600px;
+        height: 600px;
+    }
+
+    .welcome__h1{
+        width: 400px;
+        height: 116px;
+        font-size: 2em;
+        padding: 62px 0 0 96px;
+    }
+
+    .welcome__p{
+        margin-left: 105px;
+        width: 400px;
+        height: 301px;
+        font-family: 'Roboto';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 34px;
+        line-height: 40px;
+        text-align: justify;
+        color: #FFFFFF;
+    }
+
+    .play-btn{
+        position: relative;
+        width: 190px;
+        height: 60px;
+        bottom: 251px;
+        font-size: 32px;
+    }
+}
+
+@media (max-width: 1186px){
+    .welcome{
+        width: 460px;
+    }
+
+    .welcome__h1{
+        padding: 62px 0 0 17px;
+    }
+
+    .welcome__p{
+        margin-left: 20px;
+    }
+
+    .play-btn{
+        left: 125px;
+    }
+}
+
+@media(max-width: 986px){
+    .welcome__h1{
+        padding: 62px 0 0 17px;
+        font-size: 26px;
+        width: 379px;
+    }
+
+    .welcome__p{
+        width: 350px;
+        font-size: 26px;
+        margin-left: 45px;
+    }
+
+    .goodluck{
+        margin-top: -40px;
+    }
+}
+
+@media(max-width: 910px){
+    .welcome{
+        width: 410px;
+    }
+
+    .welcome__p{
+        margin-left: 30px;
+    }
+}
+
+@media(max-width:810px){
+    .welcome{
+        left: 353px;
+    }
+}
+
+@media(max-width: 764px){
+    .welcome{
+        left: 330px;
+    }
+}
+
+@media(max-width: 744px){
+    .welcome{
+        width: 350px;
+    }
+    .welcome__h1{
+        font-size: 22px;
+        width: 320px;
+        line-height: 40px;
+    }
+
+    .welcome__p {
+        font-size: 22px;
+        width: 297px;
+        margin-left: 20px;
+    }
+}
+
+@media(max-width: 680px){
+    .welcome{
+        left: 287px;
+    }
+}
+
+@media(max-width: 640px){
+    .welcome{
+        left: 267px;
+    }
+}
+
+@media(max-width: 640px){
+    .welcome{
+        left: 254px;
+    }
+}
+
+@media(max-width: 606px){
+    .welcome{
+        left: 246px;
+    }
+}
+
+@media(max-width: 597px){
+    .welcome{
+        width: 215px;
+    }
+
+    .welcome__h1{
+        font-size: 16px;
+        width: 195px;
+        padding: 50px 0 0 1px;
+    }
+
+    .welcome__p{
+        font-size: 16px;
+        width: 175px;
+        line-height: 30px;
+    }
+
+    .play-btn{
+        left: 12px;
+        font-size: 22px;
+        width: 110px;
+        height: 55px;
+    }
+} 
+
+@media(max-width: 462px){
+    .welcome{
+        width: 230px;
+        left: 39vw;
+    }
+
+    .play-btn{
+        left: 60px;
+    }
+}
+
+@media(max-width: 379px){
+    .welcome{
+        width: 300px;
+        left: 7vw;
+        background:rgba(0, 0, 0, 0.9);
+    }
+
+    .welcome__h1{
+        margin-left: 63px;
+        font-size: 18px;
+    }
+
+    .welcome__p{
+        margin-left: 60px;
+        font-size: 18px;
+    }
+
+    .goodluck{
+        padding-top: 20px;
+    }
+
+    .play-btn{
+        left: 93px;
+    }
+}
+
+@media(max-width: 324px){
+    .welcome{
+        left: 3vw;
+    }
+}
