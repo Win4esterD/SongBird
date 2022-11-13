@@ -146,14 +146,14 @@
 
 @media(max-width: 640px){
     .header{
-        height: 50px;
+        height: 34px;
     }
 
     .burger-menu{
         display:block;
         position: absolute;
-        width: 50px;
-        height: 30px;
+        width: 18px;
+        height: 10px;
         right: 10px;
         top: 10px;
     }
@@ -171,6 +171,24 @@
     .nav-ul{
         gap: 7px;
         flex-direction: column;
+    }
+}
+
+@media (max-width: 497px){
+    .nav{
+        margin-left: 13vw;
+    }
+}
+
+@media (max-width: 392px){
+    .nav{
+        margin-left: 8vw;
+    }
+}
+
+@media (max-width: 357px){
+    .nav{
+        margin-left: 1vw;
     }
 }
 

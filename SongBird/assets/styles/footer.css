@@ -149,9 +149,17 @@
     }
 }
 
-/* @media(max-width: 580px){
-    .footer{
-        flex-direction: column;
-        height: auto;
+@media (max-width: 331px){
+    .year{
+        padding: 0px 0vw 0 15vw;
     }
-} */
+
+    .rs-link{
+        margin-left: 10vw;
+        padding-bottom: 20px;
+    }
+
+    .github{
+        margin-left: 1vw;
+    }
+}
