@@ -76,7 +76,7 @@ const birdsData = [
       },
       {
         id: 4,
-        name: 'Певчий дрозд',
+        name: 'Певчий',
         species: 'Turdus philomelos',
         description: 'Дрозд — лучший певец из отряда воробьиных. Песня состоит только из красивых звучных свистов и коротких трелей. Чаще всего её можно услышать в утреннее и вечернее время. Поют дрозды в течении всего периода гнездования.',
         image: 'https://live.staticflickr.com/65535/48979125763_e2534f54bd.jpg',
@@ -279,7 +279,7 @@ const birdsData = [
         name: 'Пеликан',
         species: 'Pelecanus',
         description: 'Пеликаны — обитатели морей и рек. Ходят они неуклюже, но хорошо летают и плавают. Питаются в основном рыбой, устраивают коллективные охоты — выстроившись полукругом хлопают по воде крыльями и клювами и вытесняют напуганную рыбу на мелководье.',
-        image: 'https://live.staticflickr.com/65535/49159147156_dcbbb5c12a.jpg',
+        image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/e/ef/American_White_Pelican_%28Las_Gallinas_Wildlife_Ponds%29.jpg/270px-American_White_Pelican_%28Las_Gallinas_Wildlife_Ponds%29.jpg',
         audio: 'https://www.xeno-canto.org/sounds/uploaded/XAMHIHFTZG/XC331138-call1.mp3'
       },
       {
@@ -300,7 +300,5 @@ const birdsData = [
       }
     ]
   ];
-  
-  export default birdsData;
 
-  
+
