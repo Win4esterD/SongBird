@@ -91,7 +91,7 @@
 }
 
 .points{
-    width: 103px;
+    /* width: 103px; */
     height: 30px;
     font-family: 'Roboto';
     font-style: normal;
@@ -100,7 +100,7 @@
     line-height: 30px;
     text-align: center;
     color: #FFFFFF;
-    margin: 14px 0 0 899px;
+    margin: 14px 0 0 300px;
 }
 
 .wrapper{
@@ -151,6 +151,7 @@
     padding-top: 4px;
 }
 
+/* Это блок с описанием птицы, когда не выбрана */
 .wrapper__p{
     width: 329px;
     height: 60px;
@@ -162,11 +163,12 @@
     text-align: center;
     color: #FFFFFF;
     margin: 26px 0 0 97px;
-    display: none;
+    display: block;
 }
 
+/* Это блок с описанием птицы, птица выбрана */
 .answer-block{
-    display: block;
+    display: none;
 }
 
 .answer-block__img{
@@ -509,6 +511,10 @@
     .game {
         width: 768px;
     }
+
+    .wrapper__p{
+        margin-left: 20px;
+    }
 }
 
 @media (max-width: 800px){
@@ -608,6 +614,10 @@
         width: 145px;
     }
 
+    .option__p{
+        font-size: 20px;
+    }
+
     .player {
         width: 357.43px;
     }
@@ -683,7 +693,7 @@
     }
 
     .option__p{
-        font-size: 18px;
+        font-size: 14px;
     }
 
     .game{
@@ -776,6 +786,11 @@
     .playside{
         height: 110px;
     }
+
+    .wrapper__p{
+        font-size: 22px;
+        width: auto;
+    }
 }
 
 @media (max-width: 434px){
@@ -799,9 +814,7 @@
 }
 
 @media (max-width: 404px){
-    .option__p {
-        font-size: 16px;
-    }
+    
 
     .option {
         width: 76px;

@@ -24,6 +24,7 @@ const nextLevel = document.querySelector('.next-lvl');
 
 //other variables
 let round = 0;
+let adder = 0;
 
 function getRandomInt(min, max) {
     min = Math.ceil(min);
@@ -31,18 +32,28 @@ function getRandomInt(min, max) {
     return Math.floor(Math.random() * (max - min)) + min; //Максимум не включается, минимум включается
   }
 
-  function createOptions(round){
+function createOptions(round){
     birdPlayer.setAttribute('src', birdsData[round][getRandomInt(0, 6)].audio)
     for(let i=0; i<options.length; i++){
         options[i].innerHTML = birdsData[round][i].name
     }
   }
 
+  function optionsUpdate(round){
+    for(let i=0; i<options.length; i++){
+        options[i].remove();
+    }
+
+    for(let i=0; i<optionsBG.length; i++){
+        optionsBG[i].innerHTML = `<p class='option__p'>${birdsData[round][i].name}</p>`
+    }
+  }
 
 function chooseOption(round){
     createOptions(round)
-    options.forEach((option, index) =>{
-        option.addEventListener('click', ()=>{
+    let counter = 5;
+    document.querySelectorAll('.option__p').forEach((option, index) =>{
+        option.addEventListener('click', function eventHandler(){
             callToListen.style.display = 'none';
             answerBlock.style.display = 'block';
             answerBirdPic.setAttribute('src', birdsData[round][index].image)
@@ -52,16 +63,27 @@ function chooseOption(round){
             detailedDescription.innerHTML = birdsData[round][index].description
             if(birdPlayer.src != player2.src){
                 option.parentNode.style.background = "red"
+                option.removeEventListener('click', eventHandler)
+                counter -= 1;
+                console.log(counter)
             }else{
                 option.parentNode.style.background = "#1EC069";
                 birdPlayer.setAttribute('src', ' ')
                 birdPic.src = answerBirdPic.src;
+                birdName.innerHTML = answerBirdName.innerHTML;
+                option.removeEventListener('click', eventHandler)
+                adder += counter;
+                counter = 5;
+                points.innerHTML = `Очков: ${adder}`
+                optionsUpdate(round)
+                console.log(counter)
             }
-        })
+        }, false)
     })
 }
 
 function changeRound(){
+    
     nextLevel.addEventListener('click', ()=>{
         if(round < 5){
             round += 1;
@@ -76,7 +98,7 @@ function changeRound(){
             for(let nav of navigation){
                 nav.removeAttribute('id')
             }
-
+            optionsUpdate(round)
             navigation[round].setAttribute('id', 'tab-now');
             chooseOption(round);
         }
