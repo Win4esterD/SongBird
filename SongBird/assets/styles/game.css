@@ -228,12 +228,17 @@
     margin-left: 74px;
 }
 
-.next-lvl:hover{
+.blocker{
+    z-index: 1;
+    background: grey;
+}
+
+#next-lvl:hover{
     cursor: pointer;
     background: #16db72;
 }
 
-.next-lvl:active{
+#next-lvl:active{
     background: #FF8832;
 }
 

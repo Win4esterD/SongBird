@@ -20,7 +20,8 @@ const answerBirdName = document.querySelector('.bird-name');
 const species = document.querySelector('.species');
 const basicDescr = document.querySelector('.answer-block__basic-descr')
 const detailedDescription = document.querySelector('.answer-block__descr')
-const nextLevel = document.querySelector('.next-lvl');
+const nextLevel = document.querySelector('#next-lvl');
+const btnBlocker = document.querySelector('.blocker');
 
 //other variables
 let round = 0;
@@ -50,6 +51,8 @@ function createOptions(round){
     for(let i=0; i<optionsBG.length; i++){
         optionsBG[i].innerHTML = `<p class='option__p'>${birdsData[round][i].name}</p>`
     }
+
+    btnBlocker.style.display = "block";
   }
 
 function chooseOption(round){
@@ -81,7 +84,7 @@ function chooseOption(round){
                 points.innerHTML = `Очков: ${adder}`
                 optionsUpdate(round)
                 victorySound.play()
-                console.log(counter)
+                btnBlocker.style.display = 'none';
             }
         }, false)
     })
