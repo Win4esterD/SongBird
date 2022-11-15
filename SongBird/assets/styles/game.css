@@ -515,6 +515,10 @@
     .wrapper__p{
         margin-left: 20px;
     }
+
+    .answer-block__descr{
+        font-size: 14px;
+    }
 }
 
 @media (max-width: 800px){
