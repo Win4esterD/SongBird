@@ -26,6 +26,9 @@ const nextLevel = document.querySelector('.next-lvl');
 let round = 0;
 let adder = 0;
 
+const victorySound = new Audio('https://promosounds.ru/wp-content/uploads/2021/10/vernyy-otvet-iz-o-schastlivchik.mp3')
+const wrongAnswer = new Audio('assets/audio/wrongAnswer.mp3')
+
 function getRandomInt(min, max) {
     min = Math.ceil(min);
     max = Math.floor(max);
@@ -62,10 +65,11 @@ function chooseOption(round){
             species.innerHTML = birdsData[round][index].species;
             detailedDescription.innerHTML = birdsData[round][index].description
             if(birdPlayer.src != player2.src){
+                wrongAnswer.play();
                 option.parentNode.style.background = "red"
                 option.removeEventListener('click', eventHandler)
                 counter -= 1;
-                console.log(counter)
+                // console.log(counter)
             }else{
                 option.parentNode.style.background = "#1EC069";
                 birdPlayer.setAttribute('src', ' ')
@@ -76,6 +80,7 @@ function chooseOption(round){
                 counter = 5;
                 points.innerHTML = `Очков: ${adder}`
                 optionsUpdate(round)
+                victorySound.play()
                 console.log(counter)
             }
         }, false)

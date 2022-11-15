@@ -851,3 +851,9 @@
     }
 
 }
+
+@media(max-width: 349px){
+    .game {
+        height: 716px;
+    }
+}
