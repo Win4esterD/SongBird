@@ -8,11 +8,58 @@
     left: 306px;
 }
 
+.victory-screen{
+    display: none;
+    opacity: 0;
+    position: absolute;
+    width: auto;
+    left: 10vw;
+    top: 10vw;
+    transition: ease-in-out 1s;
+}
+
+.victory-screen__p{
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 26px;
+    line-height: 33px;
+    text-align: center;
+    color: #FFFFFF;
+
+}
+
+.restart-btn{
+    width: 186px;
+    height: 50px;
+    background: #FF9901;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 60px;
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 22px;
+    line-height: 20px;
+    text-align: center;
+    color: #FFFFFF;
+    margin-top: 20px;
+    margin-left: 20vw;
+}
+
+.restart-btn:hover{
+    cursor: pointer;
+    background: rgb(14, 228, 14);
+}
+
+.restart-btn:active{
+    background: rgb(230, 227, 9);
+}
 
 .menu{
     display: flex;
     gap: 15px;
     padding-top: 27px;
+    transition: ease-in-out 1s;
     
 }
 
@@ -53,6 +100,7 @@
     border-radius: 9px;
     margin-top: 26px;
     margin-left: 77px;
+    transition: ease-in-out 1s;
 }
 
 .bird-pic__img{
@@ -91,7 +139,6 @@
 }
 
 .points{
-    /* width: 103px; */
     height: 30px;
     font-family: 'Roboto';
     font-style: normal;
@@ -101,12 +148,14 @@
     text-align: center;
     color: #FFFFFF;
     margin: 14px 0 0 300px;
+    transition: ease-in-out 1s;
 }
 
 .wrapper{
     display:flex;
     margin: 15px 0 0 72px;
     gap: 132px;
+    transition: ease-in-out 1s;
 }
 
 .wrapper__div{

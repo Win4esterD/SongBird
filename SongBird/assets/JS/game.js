@@ -1,4 +1,8 @@
 //birdsData - там данные о птицах
+//document structure
+const menu = document.querySelector('.menu');
+const playside = document.querySelector('.playside');
+const wrapper = document.querySelector('.wrapper');
 //options
 const options = document.querySelectorAll('.option__p');
 const optionsBG = document.querySelectorAll('.option');
@@ -23,12 +27,23 @@ const detailedDescription = document.querySelector('.answer-block__descr')
 const nextLevel = document.querySelector('#next-lvl');
 const btnBlocker = document.querySelector('.blocker');
 
+
+//Victory Screen
+const victoryScreen = document.querySelector('.victory-screen');
+const victoryMessage = document.querySelector('.victory-screen__p');
+const restartBtn = document.querySelector('.restart-btn')
+
+//audios
+const victorySound = new Audio('https://promosounds.ru/wp-content/uploads/2021/10/vernyy-otvet-iz-o-schastlivchik.mp3')
+const wrongAnswer = new Audio('assets/audio/wrongAnswer.mp3')
+const finalVictory = new Audio('assets/audio/priz.mp3')
+
 //other variables
 let round = 0;
 let adder = 0;
+let result = 0;
 
-const victorySound = new Audio('https://promosounds.ru/wp-content/uploads/2021/10/vernyy-otvet-iz-o-schastlivchik.mp3')
-const wrongAnswer = new Audio('assets/audio/wrongAnswer.mp3')
+
 
 function getRandomInt(min, max) {
     min = Math.ceil(min);
@@ -72,7 +87,6 @@ function chooseOption(round){
                 option.parentNode.style.background = "red"
                 option.removeEventListener('click', eventHandler)
                 counter -= 1;
-                // console.log(counter)
             }else{
                 option.parentNode.style.background = "#1EC069";
                 birdPlayer.setAttribute('src', ' ')
@@ -82,16 +96,60 @@ function chooseOption(round){
                 adder += counter;
                 counter = 5;
                 points.innerHTML = `Очков: ${adder}`
-                optionsUpdate(round)
-                victorySound.play()
+                optionsUpdate(round);
+                victorySound.play();
                 btnBlocker.style.display = 'none';
             }
         }, false)
     })
 }
 
+function callVictoryScreen(){
+    menu.style.opacity = 0;
+    playside.style.opacity = '0';
+    points.style.opacity = '0';
+    wrapper.style.opacity = '0';
+    victoryScreen.style.display = 'block';
+    victoryScreen.style.opacity = 1;
+    result = adder;
+    victoryMessage.innerHTML = `Поздравляем! Вы набрали ${result} очков из 30-и. Хотите попробовать ещё раз?`
+}
+
+function restartGame(){
+    menu.style.opacity = 1;
+    playside.style.opacity = '1';
+    points.style.opacity = '1';
+    wrapper.style.opacity = '1';
+    victoryScreen.style.opacity = 0;
+    victoryScreen.style.display = 'none';
+    round = 0;
+    adder = 0;
+    counter = 5;
+    for(let el of document.querySelectorAll('.option__p')){
+        el.remove()
+    }
+
+    for(let i=0; i<optionsBG.length; i++){
+        optionsBG[i].innerHTML = `<p class='option__p'>${birdsData[0][i].name}</p>`
+        optionsBG[i].style.background = "#473A3A"
+    }
+    points.innerHTML = `Очков: ${adder}`;
+    chooseOption(0);
+    answerBlock.style.display = 'none';
+    callToListen.style.display = 'block';
+    birdPic.src = defaultBirdImg;
+    btnBlocker.style.display = "block";
+    birdName.innerHTML = "******"
+    for(let nav of navigation){
+        nav.removeAttribute('id')
+    }
+
+    navigation[0].setAttribute('id', 'tab-now')
+}
+
+restartBtn.addEventListener('click', restartGame);
+
 function changeRound(){
-    
     nextLevel.addEventListener('click', ()=>{
         if(round < 5){
             round += 1;
@@ -109,11 +167,13 @@ function changeRound(){
             optionsUpdate(round)
             navigation[round].setAttribute('id', 'tab-now');
             chooseOption(round);
+        }else if(round === 5){
+            finalVictory.play()
+            callVictoryScreen()
         }
     })
 }
 
-
-
+// callVictoryScreen()
 chooseOption(round)
 changeRound()
