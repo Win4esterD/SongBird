@@ -1,4 +1,5 @@
 .welcome{
+    display: block;
     position: relative;
     width: 737px;
     height: 768px;
@@ -21,7 +22,7 @@
     padding: 62px 0 0 57px;
 }
 
-.game{
+.game-name{
     color: rgba(225, 229, 23, 1);
 }
 

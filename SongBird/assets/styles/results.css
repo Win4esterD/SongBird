@@ -1,3 +1,7 @@
+.results{
+    display: none;
+}
+
 .welcome{
     position: relative;
     width: 737px;

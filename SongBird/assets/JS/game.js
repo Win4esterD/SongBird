@@ -39,6 +39,7 @@ const wrongAnswer = new Audio('assets/audio/wrongAnswer.mp3')
 const finalVictory = new Audio('assets/audio/priz.mp3')
 
 //other variables
+const startButton = document.querySelector('.play-btn')
 let round = 0;
 let adder = 0;
 let result = 0;
@@ -112,7 +113,16 @@ function callVictoryScreen(){
     victoryScreen.style.display = 'block';
     victoryScreen.style.opacity = 1;
     result = adder;
-    victoryMessage.innerHTML = `Поздравляем! Вы набрали ${result} очков из 30-и. Хотите попробовать ещё раз?`
+    victoryMessage.innerHTML = `Поздравляем! Вы набрали ${result} очков из 30-и. Хотите попробовать ещё раз?`;
+}
+
+function backToTheGame(){
+    menu.style.opacity = 1;
+    playside.style.opacity = '1';
+    points.style.opacity = '1';
+    wrapper.style.opacity = '1';
+    victoryScreen.style.opacity = 0;
+    victoryScreen.style.display = 'none';
 }
 
 function restartGame(){
@@ -144,10 +154,13 @@ function restartGame(){
         nav.removeAttribute('id')
     }
 
-    navigation[0].setAttribute('id', 'tab-now')
+    // navigation[0].setAttribute('id', 'tab-now')
+    tabs[1].click()
 }
 
+startButton.addEventListener('click', restartGame);
 restartBtn.addEventListener('click', restartGame);
+
 
 function changeRound(){
     nextLevel.addEventListener('click', ()=>{
@@ -169,11 +182,12 @@ function changeRound(){
             chooseOption(round);
         }else if(round === 5){
             finalVictory.play()
-            callVictoryScreen()
+            tabs[2].click()
+            // callVictoryScreen()
         }
     })
 }
 
-// callVictoryScreen()
+
 chooseOption(round)
 changeRound()

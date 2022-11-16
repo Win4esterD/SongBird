@@ -11,6 +11,7 @@
     <link rel="stylesheet" href="assets/styles/header.css">
     <link rel="stylesheet" href="assets/styles/main.css">
     <link rel="stylesheet" href="assets/styles/index.css">
+    <link rel="stylesheet" href="assets/styles/game.css">
     <link rel="stylesheet" href="assets/styles/footer.css">
 </head>
 <body>
@@ -20,9 +21,9 @@
         </div>
         <nav class="nav">
             <ul class="nav-ul">
-                <li class="nav-ul__li"><a class="nav-ul__li__a" id="active" href="index.html">Главная страница</a></li>
-                <li class="nav-ul__li"><a class="nav-ul__li__a" href="game.html">Викторина</a></li>
-                <li class="nav-ul__li"><a class="nav-ul__li__a" href="results.html">Результаты</a></li>
+                <li class="nav-ul__li"><a class="nav-ul__li__a" id="active" href="#">Главная страница</a></li>
+                <li class="nav-ul__li"><a class="nav-ul__li__a" href="#">Викторина</a></li>
+                <li class="nav-ul__li"><a class="nav-ul__li__a" href="#">Результаты</a></li>
             </ul>
         </nav>
         <img class="burger-menu" src="assets/IMG/burger_menu.png" alt="burger menu">
@@ -30,12 +31,79 @@
     <main class="main">
         <section class="welcome">
             <h1 class="welcome__h1">
-                Добро пожаловать в игру <span class="game">Song Bird!</span>
+                Добро пожаловать в игру <span class="game-name">Song Bird!</span>
             </h1>
             <p class="welcome__p">Вам предстоит отгадывать названия птиц прослушивая записи их голосов. 
                 Постарайтесь отгадать как можно больше названий птиц.</p>
             <p class="welcome__p goodluck">Удачи!</p>
             <button class="play-btn">ИГРАТЬ</в>
+        </section>
+
+        <section class="game">
+            <nav class="menu">
+                <div class="menu__div" id="tab-now"><p class="menu__p">Разминка</p></div>
+                <div class="menu__div"><p class="menu__p">Воробьиные</p></div>
+                <div class="menu__div"><p class="menu__p">Лесные птицы</p></div>
+                <div class="menu__div"><p class="menu__p">Певчие птицы</p></div>
+                <div class="menu__div"><p class="menu__p">Хищные птицы</p></div>
+                <div class="menu__div"><p class="menu__p">Морские птицы</p></div>
+            </nav>
+            <p class="points">Очков: 0</p>
+            <div class="playside">
+                <div class="bird-pic">
+                    <img class="bird-pic__img" src="assets/IMG/bird_06a46938.jpg" alt="unknown bird">
+                </div>
+                <div class="player-block">
+                    <p class="player-block__p">******</p>
+                    <hr class="player-block__hr">
+                    <audio controls class="player">
+                        <source class="player1-source" src="https://www.xeno-canto.org/sounds/uploaded/XIQVMQVUPP/XC518684-Grands%20corbeaux%2009012020%20Suzon.mp3" type="audio/mp3">
+                    </audio>
+                </div>
+            </div>
+           
+            <div class="wrapper">
+                <div class="wrapper__div options">
+                    <div class="options-wrapper">
+                        <div class="option"><p class="option__p">Ворон</p></div>
+                        <div class="option"><p class="option__p">Журавль</p></div>
+                        <div class="option"><p class="option__p">Ласточка</p></div>
+                        <div class="option"><p class="option__p">Козодой</p></div>
+                        <div class="option"><p class="option__p">Кукушка</p></div>
+                        <div class="option"><p class="option__p">Синица</p></div>
+                    </div>
+                </div>
+                <div class="wrapper__div description-block">
+                    <p class="wrapper__p">Послушайте плеер, выберите птицу из списка</p>
+                    <div class="next-lvl blocker">
+                        <p class="next-lvl__p">Следующий уровень</p>
+                    </div>
+                    <div id="next-lvl" class="next-lvl">
+                        <p class="next-lvl__p">Следующий уровень</p>
+                    </div>
+                    <div class="answer-block">
+                        <div class="answer-block__header">
+                            <img class="answer-block__img" src="https://live.staticflickr.com//65535//49298804222_474cfe8682.jpg" alt="Raven">
+                            <div class="answer-block__basic-descr">
+                                <p class="bird-name">Ворон</p>
+                                <hr>
+                                <p class="species">Corvus corax</p>
+                                <hr>
+                                <audio controls class="answer-block__player">
+                                    <source class="player2-source" src="https://www.xeno-canto.org/sounds/uploaded/XIQVMQVUPP/XC518684-Grands%20corbeaux%2009012020%20Suzon.mp3" type="audio/mp3">
+                                </audio>
+                            </div>
+                        </div>
+                        <p class="answer-block__descr">
+                            Ворон – крупная птица. Длина тела достигает 70 сантиметров, размах крыльев – до полутора метров. Вороны населяют окрестности Тауэра. В Англии бытует поверье, что в день, когда черные вороны улетят от Тауэра, монархия рухнет.
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="victory-screen">
+                <p class="victory-screen__p"></p>
+                <button class="restart-btn">ИГРАТЬ СНОВА</button>
+            </div>
         </section>
     </main>
     <footer class="footer">
@@ -47,5 +115,7 @@
         <a href="https://rs.school/js/" class="rs-link"><img class="rs-link__img" src="assets/IMG/rs_school_js 1.png" alt="rs-logo"></a>
     </footer>
     <script src="assets/JS/burger-menu.js"></script>
+    <script src="assets/JS/birds.js"></script>
+    <script src="assets/JS/game.js"></script>
 </body>
 </html>

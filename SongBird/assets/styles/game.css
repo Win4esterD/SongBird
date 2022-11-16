@@ -1,4 +1,5 @@
 .game{
+    display: none;
     position: relative;
     width: 1276px;
     height: 765px;

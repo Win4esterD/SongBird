@@ -4,8 +4,9 @@ const burger = document.querySelector('.burger-menu');
 const nav = document.querySelector('.nav');
 const logo = document.querySelector('.logo');
 const header = document.querySelector('.header');
-
-
+const tabs = document.querySelectorAll('.nav-ul__li__a')
+const gameFrame = document.querySelector('.game')
+const welcomeFrame = document.querySelector('.welcome')
 
 burger.addEventListener('click', ()=>{
     let style = window.getComputedStyle(nav);
@@ -20,3 +21,26 @@ burger.addEventListener('click', ()=>{
     }
 })
 
+tabs.forEach((tab, index) =>{
+    tab.addEventListener('click', () =>{
+        for(let tab of tabs){
+            tab.removeAttribute('id');
+        }
+        tabs[index].setAttribute('id', 'active')
+        if(index === 0){
+            gameFrame.style.display = 'none';
+            welcomeFrame.style.opacity = 1;
+            welcomeFrame.style.display = 'block';
+        }else if(index === 1){
+            welcomeFrame.style.opacity = 0;
+            welcomeFrame.style.display = 'none';
+            gameFrame.style.display = 'block';
+            backToTheGame()
+        }else if(index === 2){
+            welcomeFrame.style.opacity = 0;
+            welcomeFrame.style.display = 'none';
+            gameFrame.style.display = 'block';
+            callVictoryScreen()
+        }
+    })
+})
