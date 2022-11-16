@@ -154,7 +154,7 @@ function restartGame(){
         nav.removeAttribute('id')
     }
 
-    // navigation[0].setAttribute('id', 'tab-now')
+    navigation[0].setAttribute('id', 'tab-now')
     tabs[1].click()
 }
 
