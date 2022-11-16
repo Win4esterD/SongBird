@@ -40,6 +40,7 @@ const finalVictory = new Audio('assets/audio/priz.mp3')
 
 //other variables
 const startButton = document.querySelector('.play-btn')
+let counter = 5;
 let round = 0;
 let adder = 0;
 let result = 0;
@@ -59,7 +60,7 @@ function createOptions(round){
     }
   }
 
-  function optionsUpdate(round){
+function optionsUpdate(round){
     for(let i=0; i<options.length; i++){
         options[i].remove();
     }
@@ -71,18 +72,30 @@ function createOptions(round){
     btnBlocker.style.display = "block";
   }
 
+function revealBirdInfo(){
+    document.querySelectorAll('.option').forEach((el, index) => {
+        el.addEventListener('click', () =>{
+            answerBirdPic.setAttribute('src', birdsData[round][index].image);
+            answerBirdName.innerHTML = birdsData[round][index].name;
+            player2.setAttribute('src', birdsData[round][index].audio);
+            species.innerHTML = birdsData[round][index].species;
+            detailedDescription.innerHTML = birdsData[round][index].description;
+        })
+    })
+}
+
 function chooseOption(round){
     createOptions(round)
-    let counter = 5;
+    // let counter = 5;
     document.querySelectorAll('.option__p').forEach((option, index) =>{
         option.addEventListener('click', function eventHandler(){
             callToListen.style.display = 'none';
             answerBlock.style.display = 'block';
-            answerBirdPic.setAttribute('src', birdsData[round][index].image)
-            answerBirdName.innerHTML = birdsData[round][index].name
-            player2.setAttribute('src', birdsData[round][index].audio)
+            answerBirdPic.setAttribute('src', birdsData[round][index].image);
+            answerBirdName.innerHTML = birdsData[round][index].name;
+            player2.setAttribute('src', birdsData[round][index].audio);
             species.innerHTML = birdsData[round][index].species;
-            detailedDescription.innerHTML = birdsData[round][index].description
+            detailedDescription.innerHTML = birdsData[round][index].description;
             if(birdPlayer.src != player2.src){
                 wrongAnswer.play();
                 option.parentNode.style.background = "red"
@@ -96,7 +109,7 @@ function chooseOption(round){
                 option.removeEventListener('click', eventHandler)
                 adder += counter;
                 counter = 5;
-                points.innerHTML = `Очков: ${adder}`
+                points.innerHTML = `Очков: ${adder}`;
                 optionsUpdate(round);
                 victorySound.play();
                 btnBlocker.style.display = 'none';
@@ -190,4 +203,5 @@ function changeRound(){
 
 
 chooseOption(round)
+revealBirdInfo()
 changeRound()
