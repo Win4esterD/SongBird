@@ -12,6 +12,8 @@
     <link rel="stylesheet" href="assets/styles/main.css">
     <link rel="stylesheet" href="assets/styles/game.css">
     <link rel="stylesheet" href="assets/styles/footer.css">
+    <link rel="stylesheet" href="assets/styles/player.css">
+    <link rel="stylesheet" href="assets/styles/player2.css">
 </head>
 <body>
     <header class="header">
@@ -44,9 +46,17 @@
                 <div class="player-block">
                     <p class="player-block__p">******</p>
                     <hr class="player-block__hr">
-                    <audio controls class="player">
-                        <source class="player1-source" src="https://www.xeno-canto.org/sounds/uploaded/XIQVMQVUPP/XC518684-Grands%20corbeaux%2009012020%20Suzon.mp3" type="audio/mp3">
-                    </audio>
+                    <div class="audio-container">
+                        <div class="playback-button">
+                            <img class="playback-button__img" src="assets/IMG/play.png" alt="play button">
+                        </div>
+                        <input type="range" class="timeline-2" min="0" value="0" step="1">
+                        <div class="time-info">
+                            <p class = time-now><span class="cur-mins">00</span>:<span class="cur-secs">00</span></p>
+                            <p class="duration-time"><span class="dur-min">00</span>:<span class="dur-sec">00</span></p>
+                        </div>
+                        <input type="range" class="volume" value="1" min="0" max="1" step="0.1">
+                    </div>
                 </div>
             </div>
             <p class="points">Очков: 0</p>
@@ -77,9 +87,22 @@
                                 <hr>
                                 <p class="species">Corvus corax</p>
                                 <hr>
-                                <audio controls class="answer-block__player">
+                                <!-- <audio controls class="answer-block__player">
                                     <source class="player2-source" src="https://www.xeno-canto.org/sounds/uploaded/XIQVMQVUPP/XC518684-Grands%20corbeaux%2009012020%20Suzon.mp3" type="audio/mp3">
-                                </audio>
+                                </audio> -->
+                                <div class="answer-block__player">
+                                    <div class="player-and-timeline">
+                                        <div class="player2-btn">
+                                            <img class="player2-img" src="assets/IMG/play.png" alt="play button">
+                                        </div>
+                                        <div><input type="range" class="player2__timeline" min="0" value="0" step="1"></div>
+                                    </div>
+                                    <div class="player2-timers">
+                                        <p class="player2-current"><span class="p2-cur-min">00</span>:<span class="p2-cur-sec">00</span></p>
+                                        <p class="player2-duration"><span class="p2-dur-min">00</span>:<span class="p2-dur-sec">00</span></p>
+                                    </div>
+                                    <input type="range" class="player2__volume" value="1" min="0" max="1" step="0.1">
+                                </div>
                             </div>
                         </div>
                         <p class="answer-block__descr">
@@ -104,6 +127,7 @@
     </footer>
     <script src="assets/JS/burger-menu.js"></script>
     <script src="assets/JS/birds.js"></script>
-    <script src="assets/JS/game.js"></script>
+    <script src="assets/JS/player2.js"></script>
+    <script src="assets/JS/game2.js"></script>
 </body>
 </html>

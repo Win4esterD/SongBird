@@ -519,6 +519,7 @@
     .game {
         width: 864px;
     }
+
 }
 
 @media (max-width: 864px){
@@ -817,6 +818,12 @@
     }
 }
 
+@media (max-width: 474px){
+    .player-block__hr {
+        width: 290px;
+    }
+}
+
 @media (max-width: 466px){
     .answer-block__player {
         width: 180px;
@@ -848,6 +855,10 @@
 
     .wrapper__p{
         font-size: 22px;
+        width: auto;
+    }
+
+    .player-block__hr {
         width: auto;
     }
 }
