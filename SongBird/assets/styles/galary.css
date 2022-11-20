@@ -44,6 +44,7 @@
     cursor: pointer;
     border-radius: 5px;
     padding-bottom: 10px;
+    padding-top: 10px;
 }
 
 .bird-block__latin{
