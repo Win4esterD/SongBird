@@ -295,7 +295,8 @@ function chooseOption(round){
                 option.removeEventListener('click', eventHandler)
                 adder += counter;
                 counter = 5;
-                points.innerHTML = `Score: ${adder}`;
+                // points.innerHTML = `Score: ${adder}`;
+                pointsTranslater()
                 optionsUpdate(round);
                 victorySound.play();
                 btnBlocker.style.display = 'none';
@@ -346,7 +347,8 @@ function restartGame(){
         optionsBG[i].innerHTML = `<p class='option__p'>${birdsData[0][i].name}</p>`
         optionsBG[i].style.background = "#473A3A"
     }
-    points.innerHTML = `Score: ${adder}`;
+    // points.innerHTML = `Score: ${adder}`;
+    pointsTranslater()
     chooseOption(0);
     answerBlock.style.display = 'none';
     callToListen.style.display = 'block';
