@@ -3,6 +3,8 @@
 const menu = document.querySelector('.menu');
 const playside = document.querySelector('.playside');
 const wrapper = document.querySelector('.wrapper');
+let birdsData = birdsDataRu;
+
 //options
 const options = document.querySelectorAll('.option__p');
 const optionsBG = document.querySelectorAll('.option');
@@ -307,7 +309,11 @@ function callVictoryScreen(){
     victoryScreen.style.display = 'block';
     victoryScreen.style.opacity = 1;
     result = adder;
-    victoryMessage.innerHTML = `Поздравляем! Вы набрали ${result} очков из 30-и. Хотите попробовать ещё раз?`;
+    if(!localStorage.getItem('lang') || localStorage.getItem('lang') === "RU"){
+        victoryMessage.innerHTML = `Поздравляем! Вы набрали ${result} очков из 30-и. Хотите попробовать ещё раз?`;
+    }else if(localStorage.getItem('lang') === "EN"){
+        victoryMessage.innerHTML =`Congratulations! You've got ${result} points out of 30. Want to try again?`
+    }
 }
 
 function backToTheGame(){
