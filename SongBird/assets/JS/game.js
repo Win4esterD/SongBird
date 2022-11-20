@@ -266,10 +266,7 @@ function revealBirdInfo(){
     })
 }
 
-document.querySelectorAll('.nav-ul__li')[1].addEventListener('click', ()=>{
-
-    chooseOption(round)
-})
+document.querySelectorAll('.nav-ul__li')[1].addEventListener('click', restartGame)
 
 
 function chooseOption(round){
@@ -290,11 +287,7 @@ function chooseOption(round){
                 option.removeEventListener('click', eventHandler)
                 counter -= 1;
             }else{
-                try{
-                    option.parentNode.style.background = "#1EC069";
-                }catch(err){
-                    adder = 0;
-                }
+                option.parentNode.style.background = "#1EC069";
                 birdPlayer.pause()
                 playBtnImg.setAttribute('src', 'assets/IMG/play.png')
                 birdPic.src = answerBirdPic.src;
@@ -302,7 +295,7 @@ function chooseOption(round){
                 option.removeEventListener('click', eventHandler)
                 adder += counter;
                 counter = 5;
-                pointsTranslater()
+                points.innerHTML = `Score: ${adder}`;
                 optionsUpdate(round);
                 victorySound.play();
                 btnBlocker.style.display = 'none';
@@ -353,7 +346,7 @@ function restartGame(){
         optionsBG[i].innerHTML = `<p class='option__p'>${birdsData[0][i].name}</p>`
         optionsBG[i].style.background = "#473A3A"
     }
-    pointsTranslater()
+    points.innerHTML = `Score: ${adder}`;
     chooseOption(0);
     answerBlock.style.display = 'none';
     callToListen.style.display = 'block';
