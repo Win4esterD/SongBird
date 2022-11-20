@@ -58,6 +58,16 @@
     background: rgb(230, 227, 9);
 }
 
+.final-buttons{
+    display: flex;
+    flex-direction: column;
+}
+
+.galary-link{
+    text-decoration: none;
+    color: #FFFFFF;
+}
+
 .menu{
     display: flex;
     gap: 15px;

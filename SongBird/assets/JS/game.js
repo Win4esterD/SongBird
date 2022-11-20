@@ -316,7 +316,7 @@ function callVictoryScreen(){
     if(!localStorage.getItem('lang') || localStorage.getItem('lang') === "RU"){
         victoryMessage.innerHTML = `Поздравляем! Вы набрали ${result} очков из 30-и. Хотите попробовать ещё раз?`;
     }else if(localStorage.getItem('lang') === "EN"){
-        victoryMessage.innerHTML = `Congratulations! You've got ${result} points out of 30-и. Want to try again?`
+        victoryMessage.innerHTML = `Congratulations! You've got ${result} points out of 30. Want to try again?`
     }
 }
 

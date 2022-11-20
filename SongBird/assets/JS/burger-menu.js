@@ -28,9 +28,13 @@ tabs.forEach((tab, index) =>{
         }
         tabs[index].setAttribute('id', 'active')
         if(index === 0){
-            gameFrame.style.display = 'none';
-            welcomeFrame.style.opacity = 1;
-            welcomeFrame.style.display = 'block';
+            try{
+                gameFrame.style.display = 'none';
+                welcomeFrame.style.opacity = 1;
+                welcomeFrame.style.display = 'block';
+            }catch(err){
+
+            }
         }else if(index === 1){
             welcomeFrame.style.opacity = 0;
             welcomeFrame.style.display = 'none';

@@ -93,6 +93,7 @@ function translateToEnglish(){
     }
 
     document.querySelector('.restart-btn').innerHTML = "PLAY AGAIN"
+    document.querySelector('.galary-link').innerHTML = "GALLARY"
 
 }
 
@@ -134,5 +135,5 @@ function translateToRussian(){
     }
 
     document.querySelector('.restart-btn').innerHTML = "ИГРАТЬ СНОВА"
-
+    document.querySelector('.galary-link').innerHTML = "В ГАЛЕРЕЮ"
 }
