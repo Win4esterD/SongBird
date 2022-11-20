@@ -1,5 +1,12 @@
 const language = document.querySelector("#language")
 
+function pointsTranslater(){
+    if(!localStorage.getItem('lang') || localStorage.getItem('lang') == "RU"){
+        points.innerHTML = `Очков: ${adder}`;
+    }else if(localStorage.getItem('lang') == "EN"){
+        points.innerHTML = `Score: ${adder}`;
+    }
+}
 
 document.addEventListener('DOMContentLoaded', function(){
 	if(localStorage.getItem('lang')){
@@ -12,6 +19,8 @@ document.addEventListener('DOMContentLoaded', function(){
             translateToRussian()
         }
     }
+
+    pointsTranslater()
     chooseOption(round)
 });
 

@@ -266,6 +266,12 @@ function revealBirdInfo(){
     })
 }
 
+document.querySelectorAll('.nav-ul__li')[1].addEventListener('click', ()=>{
+
+    chooseOption(round)
+})
+
+
 function chooseOption(round){
     createOptions(round)
     // let counter = 5;
@@ -284,7 +290,11 @@ function chooseOption(round){
                 option.removeEventListener('click', eventHandler)
                 counter -= 1;
             }else{
-                option.parentNode.style.background = "#1EC069";
+                try{
+                    option.parentNode.style.background = "#1EC069";
+                }catch(err){
+                    adder = 0;
+                }
                 birdPlayer.pause()
                 playBtnImg.setAttribute('src', 'assets/IMG/play.png')
                 birdPic.src = answerBirdPic.src;
@@ -292,7 +302,7 @@ function chooseOption(round){
                 option.removeEventListener('click', eventHandler)
                 adder += counter;
                 counter = 5;
-                points.innerHTML = `Очков: ${adder}`;
+                pointsTranslater()
                 optionsUpdate(round);
                 victorySound.play();
                 btnBlocker.style.display = 'none';
@@ -309,10 +319,10 @@ function callVictoryScreen(){
     victoryScreen.style.display = 'block';
     victoryScreen.style.opacity = 1;
     result = adder;
-    if(!localStorage.getItem('lang') || localStorage.getItem('lang') === "RU"){
+    if(!localStorage.getItem('lang') || localStorage.getItem('lang') == "RU"){
         victoryMessage.innerHTML = `Поздравляем! Вы набрали ${result} очков из 30-и. Хотите попробовать ещё раз?`;
-    }else if(localStorage.getItem('lang') === "EN"){
-        victoryMessage.innerHTML =`Congratulations! You've got ${result} points out of 30. Want to try again?`
+    }else if(localStorage.getItem('lang') == "EN"){
+        `Congratulations! You've got ${result} points out of 30-и. Want to try again?`
     }
 }
 
@@ -343,7 +353,7 @@ function restartGame(){
         optionsBG[i].innerHTML = `<p class='option__p'>${birdsData[0][i].name}</p>`
         optionsBG[i].style.background = "#473A3A"
     }
-    points.innerHTML = `Очков: ${adder}`;
+    pointsTranslater()
     chooseOption(0);
     answerBlock.style.display = 'none';
     callToListen.style.display = 'block';
