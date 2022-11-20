@@ -267,7 +267,7 @@ function revealBirdInfo(){
 }
 
 document.querySelectorAll('.nav-ul__li')[1].addEventListener('click', restartGame)
-
+// document.querySelectorAll('.nav-ul__li')[2].addEventListener('click', callVictoryScreen)  
 
 function chooseOption(round){
     createOptions(round)
@@ -313,10 +313,10 @@ function callVictoryScreen(){
     victoryScreen.style.display = 'block';
     victoryScreen.style.opacity = 1;
     result = adder;
-    if(!localStorage.getItem('lang') || localStorage.getItem('lang') == "RU"){
+    if(!localStorage.getItem('lang') || localStorage.getItem('lang') === "RU"){
         victoryMessage.innerHTML = `Поздравляем! Вы набрали ${result} очков из 30-и. Хотите попробовать ещё раз?`;
-    }else if(localStorage.getItem('lang') == "EN"){
-        `Congratulations! You've got ${result} points out of 30-и. Want to try again?`
+    }else if(localStorage.getItem('lang') === "EN"){
+        victoryMessage.innerHTML = `Congratulations! You've got ${result} points out of 30-и. Want to try again?`
     }
 }
 
