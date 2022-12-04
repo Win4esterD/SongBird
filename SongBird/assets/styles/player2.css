@@ -1,0 +1,112 @@
+.player-and-timeline{
+    display: flex;
+    flex-direction: row;
+}
+
+.player2-btn {
+    -webkit-transition: .2s;
+    transition: .2s;
+    width: 20px;
+    height: 20px;
+    border: 2px solid #00bc8c;
+    justify-content: center;
+    border-radius: 50%;
+    margin: 0 5px 0 5px;
+    cursor: pointer;
+}
+
+.player2-timers{
+    display: flex;
+    font-family: Roboto;
+    font-size: 14px;
+    color: white;
+    margin-left: 28px;
+    gap: 203px;
+}
+
+.player2__timeline[type="range"]{
+    -webkit-appearance: none !important;
+    background: linear-gradient(to right, rgb(0, 188, 140) 0%, rgb(61, 133, 140) 0%, rgb(115, 115, 115) 0%, rgb(115, 115, 115) 100%);
+    position: relative;
+    height: 4px;
+    cursor: pointer;
+    width: 267px;
+}
+
+.player2__timeline[type='range']::-webkit-slider-thumb {
+    -webkit-appearance: none !important;
+    background-color: grey;
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.player2__volume[type="range"]{
+    -webkit-appearance: none !important;
+    background: linear-gradient(to right, rgb(0, 188, 140) 0%, rgb(61, 133, 140) 0%, rgb(115, 115, 115) 0%, rgb(115, 115, 115) 100%);
+    position: relative;
+    height: 3px;
+    width: 90px;
+    margin-left: 90px;
+    bottom: 20px;
+}
+
+.player2__volume[type="range"]::-webkit-slider-thumb{
+    -webkit-appearance: none !important;
+    background-color: grey;
+    width: 16px;
+    height: 16px;
+    cursor: pointer;
+    border-radius: 50%;
+}
+
+@media (max-width: 864px){
+    .player2__timeline[type="range"]{
+        width: 213px;
+    }
+
+    .player2-timers{
+        gap: 148px;
+    }
+}
+
+@media (max-width: 466px){
+    .player2__timeline[type="range"] {
+        width: 170px;
+    }
+
+    .player2__volume[type="range"]{
+        width: 66px;
+        margin-left: 76px;
+    }
+
+    .player2-timers{
+        gap: 107px;
+    }
+}
+
+@media (max-width: 420px){
+    .player2__timeline[type="range"] {
+        width: 150px;
+    }
+
+    .player2-timers{
+        gap: 80px;
+    }
+
+    .player2__volume[type="range"]{
+        width: 55px;
+        margin-left: 70px;
+    }
+}
+
+@media (max-width: 379px){
+    .player2__timeline[type="range"] {
+        width: 120px;
+    }
+
+    .player2-timers{
+        gap: 65px;
+    }
+}

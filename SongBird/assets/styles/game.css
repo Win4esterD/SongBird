@@ -1,0 +1,941 @@
+.game{
+    display: none;
+    position: relative;
+    width: 1276px;
+    height: 765px;
+    background: #231E1E;
+    border-radius: 23px;
+    top: 23px;
+    left: 306px;
+}
+
+
+
+.victory-screen{
+    display: none;
+    opacity: 0;
+    position: absolute;
+    width: auto;
+    left: 10vw;
+    top: 10vw;
+    transition: ease-in-out 1s;
+}
+
+.victory-screen__p{
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 26px;
+    line-height: 33px;
+    text-align: center;
+    color: #FFFFFF;
+
+}
+
+.restart-btn{
+    width: 186px;
+    height: 50px;
+    background: #FF9901;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 60px;
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 22px;
+    line-height: 20px;
+    text-align: center;
+    color: #FFFFFF;
+    margin-top: 20px;
+    margin-left: 20vw;
+}
+
+.restart-btn:hover{
+    cursor: pointer;
+    background: rgb(14, 228, 14);
+}
+
+.restart-btn:active{
+    background: rgb(230, 227, 9);
+}
+
+.final-buttons{
+    display: flex;
+    flex-direction: column;
+}
+
+.galary-link{
+    text-decoration: none;
+    color: #FFFFFF;
+}
+
+.menu{
+    display: flex;
+    gap: 15px;
+    padding-top: 27px;
+    transition: ease-in-out 1s;
+    
+}
+
+.menu__div{
+    width: 200px;
+    height: 40px;
+    background: #1EC069;
+    border-radius: 5px;
+}
+
+.menu__div:hover{
+    cursor: pointer;
+}
+
+#tab-now{
+    background: #FF8832;
+}
+
+#tab-now:hover{
+    cursor: unset;
+}
+
+.menu__p{
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 26px;
+    line-height: 33px;
+    text-align: center;
+    color: #FFFFFF;
+}
+
+.playside{
+    display: flex;
+    width: 1135px;
+    height: 232px;
+    background: #302828;
+    border-radius: 9px;
+    margin-top: 26px;
+    margin-left: 77px;
+    transition: ease-in-out 1s;
+}
+
+.bird-pic__img{
+    width: 300px;
+    height: 232px;
+    border-radius: 30px;
+}
+
+.player-block{
+    margin-left: 43px;
+}
+
+.player-block__p{
+    padding-top: 10px;
+    width: 125px;
+    height: 36px;
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 42px;
+    line-height: 49px;
+    text-align: center;
+    color: #FFFFFF;
+}
+
+.player-block__hr{
+    width: 696.43px;
+    height: 0px;
+    border: 2px solid #837C7C;
+}
+
+.player{
+    margin-top: 91px;
+    width: 696.43px;
+    color: black;
+}
+
+.points{
+    height: 30px;
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 26px;
+    line-height: 30px;
+    text-align: center;
+    color: #FFFFFF;
+    margin: 14px 0 0 300px;
+    transition: ease-in-out 1s;
+}
+
+.wrapper{
+    display:flex;
+    margin: 15px 0 0 72px;
+    gap: 132px;
+    transition: ease-in-out 1s;
+}
+
+.wrapper__div{
+    width: 504px;
+    height: 359px;
+    background: #302828;
+    border-radius: 26px;
+}
+
+.options-wrapper{
+    display: flex;
+    flex-direction: column;
+    margin: 16px 0 0 38px;
+    gap: 11px;
+}
+
+.option{
+    width: 430px;
+    height: 40px;
+    background: #473A3A;
+    border: 3px solid #000000;
+    border-radius: 8px;
+}
+
+.option:hover{
+    cursor: pointer;
+    background: #594343;
+}
+
+.option:active{
+    background: #FF8832;
+}
+
+.option__p{
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 26px;
+    line-height: 30px;
+    text-align: center;
+    color: #FFFFFF;
+    padding-top: 4px;
+}
+
+/* Это блок с описанием птицы, когда не выбрана */
+.wrapper__p{
+    width: 329px;
+    height: 60px;
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 26px;
+    line-height: 30px;
+    text-align: center;
+    color: #FFFFFF;
+    margin: 26px 0 0 97px;
+    display: block;
+}
+
+/* Это блок с описанием птицы, птица выбрана */
+.answer-block{
+    display: none;
+}
+
+.answer-block__img{
+    width: 200px;
+    height: 150px;
+    border-radius: 10px;;
+}
+
+.answer-block__header{
+    display: flex;
+}
+
+.bird-name{
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 26px;
+    line-height: 30px;
+    text-align: center;
+    color: #FFFFFF;
+    padding-bottom: 10px;
+}
+
+.species{
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 30px;
+    text-align: center;
+    color: #FFFFFF;
+    padding-bottom: 10px;
+}
+
+.answer-block__player{
+    margin-top: 12px;
+}
+
+.answer-block__descr{
+    padding: 15px 10px 10px 10px;
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 30px;
+    text-align: justify;
+    color: #FFFFFF;
+}
+
+.next-lvl{
+    position: absolute;
+    width: 387px;
+    height: 40px;
+    background: #1EC069;
+    border-radius: 7px;
+    bottom: 28px;
+    margin-left: 74px;
+}
+
+.blocker{
+    z-index: 1;
+    background: grey;
+}
+
+#next-lvl:hover{
+    cursor: pointer;
+    background: #16db72;
+}
+
+#next-lvl:active{
+    background: #FF8832;
+}
+
+.next-lvl__p{
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 28px;
+    line-height: 33px;
+    text-align: center;
+    color: #FFFFFF;
+}
+
+@media (max-width: 1919px){
+    .game{
+        left: 15vw;
+    }
+}
+
+@media (max-width: 1501px){
+    .game{
+        left: 10vw;
+    }
+}
+
+@media (max-width: 1419px){
+    .game{
+        left: 5vw;
+    }
+}
+
+@media (max-width: 1366px){
+    .game{
+        left: 3vw;
+    }
+}
+
+@media (max-width: 1315px){
+    .game{
+        left: 1vw;
+    }
+}
+
+@media (max-width: 1290px){
+    .game{
+        left: 0vw;
+    }
+}
+
+@media (max-width: 1277px){
+
+    .menu__div{
+        width: 189px;
+    }
+
+    .menu__p{
+        font-size: 22px;
+    }
+
+    .game{
+        width: 1195px;
+    }
+
+    .playside{
+        margin-left: 20px;
+    }
+
+    .wrapper{
+        margin-left: 20px;
+    }
+}
+
+@media (max-width: 1195px){
+    .game{
+        width: 1160px;
+    }
+
+    .playside{
+        margin-left: 6px;
+    }
+
+    .menu__div{
+        width: 164px;
+        margin-left: 15px;
+    }
+
+    .wrapper{
+        gap: 110px;
+    }
+    
+}
+
+@media (max-width: 1161px){
+    .game{
+        width: 1066px;
+        left: 3vw;
+    }
+
+    .playside{
+        width: 1052px;
+    }
+
+    .menu__div{
+        width: 148px;
+    }
+
+    .menu__p{
+        font-size: 18px;
+    }
+
+    .points{
+        margin-left: 555px;
+    }
+
+    .wrapper{
+        margin-left: 6px;
+        gap: 29px;
+    }
+}
+
+@media(max-width: 1100px){
+    .game{
+        left: 1vw;
+    }
+}
+
+@media(max-width: 1100px){
+    .game{
+        left: 0vw;
+    }
+}
+
+@media(max-width: 1066px){
+    .game{
+        width: 1020px;
+        left: 0vw;
+    }
+    .bird-pic__img {
+        width: 250px;
+        height: 200px;
+        border-radius: 30px;
+    }
+
+    .playside {
+        width: 996px;
+    }
+
+    .menu{
+        gap: 4px;
+    }
+
+    .options{
+        width: 460px;
+    }
+
+    .option{
+        width: 360px;
+    }
+}
+
+@media(max-width: 1020px){
+    .bird-pic__img {
+        width: 200px;
+        height: 200px;
+        border-radius: 30px;
+    }
+
+    .player-block{
+        margin-left: 10px;
+    }
+
+    .playside{
+        width: 922px;
+    }
+
+    .option {
+        width: 290px;
+    }
+
+    .options {
+        width: 390px;
+    }
+
+    .menu {
+        gap: 0px;
+    }
+
+    .menu__div {
+        width: 139px;
+    }
+
+    .game{
+        width: 938px;
+    }
+}
+
+@media (max-width: 940px){
+    .player{
+        width: 540.43px;
+    }
+
+    .player-block__hr {
+        width: 530px;
+        height: 0px;
+        border: 2px solid #837C7C;
+    }
+
+    .options {
+        width: 324px;
+    }
+
+    .options-wrapper {
+        margin: 14px 0 0 9px;
+    }
+
+    .playside {
+        width: 850px;
+    }
+
+    .menu__div {
+        width: 127px;
+    }
+
+    .menu__p{
+        font-size: 16px;
+    }
+
+    .game {
+        width: 864px;
+    }
+
+}
+
+@media (max-width: 864px){
+    .menu__div {
+        margin-left: 5px;
+        width: 121px;
+    }
+
+    .playside {
+        width: 753px;
+    }
+
+    .next-lvl{
+        width: 238px;
+        height: 34px;
+    }
+
+    .next-lvl__p {
+        font-size: 22px;
+    }
+
+    .answer-block__player {
+        width: 50px;
+    }
+
+    .answer-block__player {
+        width: 250px;
+    }
+
+    .answer-block__img {
+        width: 150px;
+        height: 150px;
+        border-radius: 10px;
+    }
+
+    .description-block{
+        width: 400px;
+    }
+    
+    .next-lvl {
+        width: 230px;
+        height: 29px;
+    }
+
+    .game {
+        width: 768px;
+    }
+
+    .wrapper__p{
+        margin-left: 20px;
+    }
+
+    .answer-block__descr{
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 800px){
+    .game{
+        margin-left: 2vw;
+    }
+}
+
+@media (max-width: 784px){
+    .game{
+        margin-left: 1vw;
+    }
+}
+
+@media (max-width: 776px){
+    .game{
+        margin-left: 0vw;
+    }
+}
+
+@media (max-width: 768px){
+    .player-block {
+        margin-left: 4px;
+    }
+
+    .option {
+        width: 168px;
+    }
+
+    .options {
+        width: 200px;
+    }
+
+    .points {
+        margin-left: 384px;
+    }
+
+    .player {
+        width: 429.43px;
+    }
+
+    .player-block__hr {
+        width: 418px;
+    }
+
+    .playside {
+        width: 636px;
+    }
+
+    .menu__div {
+        margin-left: 5px;
+        /* width: 101px; */
+    }
+
+    .menu{
+        flex-wrap: wrap;
+    }
+
+    .game {
+        width: 646px;
+        height: 747px;
+        left: 5vw;
+    }
+
+    .playside{
+        height: 200px;
+    }
+
+    .points{
+        height: 20px;
+    }
+
+    .next-lvl{
+        bottom: 7px;
+    }
+
+}
+
+@media (max-width: 680px){
+    .game{
+        left: 1vw;
+    }
+}
+
+@media (max-width: 654px){
+    .game{
+        left: 0px;
+    }
+}
+
+@media (max-width: 646px){
+    .option {
+        width: 118px;
+    }
+
+    .options {
+        width: 145px;
+    }
+
+    .option__p{
+        font-size: 20px;
+    }
+
+    .player {
+        width: 357.43px;
+    }
+
+    .player-block__hr {
+        width: 342px;
+    }
+
+    .playside {
+        width: 563px;
+    }
+
+    .game {
+        width: 581px;
+        left: 5vw;
+    }
+}
+
+@media (max-width: 612px){
+    .game{
+        left: 1vw;
+    }
+}
+
+@media (max-width: 588px){
+    .game{
+        left: 0vw;
+    }
+}
+
+@media (max-width: 582px){
+    .game{
+        width: 100%;
+    }
+
+    .menu{
+        gap: 10px;
+        padding-top: 9px;
+        padding-left: 4vw;
+    }
+
+    .bird-pic__img {
+        width: 130px;
+        height: 130px;
+    }
+
+    .player{
+        margin-top: 17px;
+    }
+
+    .playside{
+        margin-top: 12px;
+        margin-left: 20px;
+        width: 494px;
+        height: 130px;
+    }
+
+    .points{
+        width: auto;
+        height: 16px;
+        margin-top: 5px;
+        font-size: 16px;
+        margin-left: 150px;
+    }
+
+    .options{
+        width: 116px;
+    }
+
+    .option{
+        width: 89px;
+
+    }
+
+    .option__p{
+        font-size: 14px;
+    }
+
+    .game{
+        height: 646px;
+    }
+
+    .next-lvl{
+        width: 183px;
+    }
+
+    .next-lvl__p {
+        font-size: 18px;
+    }
+}
+
+@media (max-width: 560px){
+    .menu{
+        padding-left: 0px;
+    }
+}
+
+@media (max-width: 546px){
+    .menu{
+        margin-left: 3vw;
+    }
+    .wrapper{
+        gap: 5px;
+    }
+}
+
+@media (max-width: 518px){
+    .answer-block{
+        width: auto;
+    }
+    .answer-block__img{
+        width: 100px;
+        height: 100px;
+    }
+
+    .answer-block__player {
+        width: 250px;
+    }
+
+    .bird-name{
+        padding-bottom: 1px;
+    }
+
+    .species{
+        padding-bottom: 1px;
+    }
+
+    .player{
+        width: 300px;;
+    }
+
+    .player-block__hr{
+        width: auto;
+    }
+
+    .playside{
+        width: auto;
+    }
+}
+
+@media (max-width: 474px){
+    .player-block__hr {
+        width: 290px;
+    }
+}
+
+@media (max-width: 466px){
+    .answer-block__player {
+        width: 180px;
+    }
+
+    .player-block__p{
+        padding-top: 0px;
+        font-size: 32px;
+        height: 32px;
+    }
+
+    .bird-name{
+        font-size: 22px;
+        line-height: 25px;
+    }
+
+    .next-lvl{
+        bottom: 0px;
+    }
+
+    .bird-pic__img {
+        width: 110px;
+        height: 110px
+    }
+
+    .playside{
+        height: 110px;
+    }
+
+    .wrapper__p{
+        font-size: 22px;
+        width: auto;
+    }
+
+    .player-block__hr {
+        width: auto;
+    }
+}
+
+@media (max-width: 434px){
+    .player {
+        width: 230px;
+    }
+}
+
+@media (max-width: 412px){
+
+    .menu{
+        margin-left: 2vw;
+    }
+    .menu__div{
+        width: 105px;
+    }
+
+    .menu__p{
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 404px){
+    
+
+    .option {
+        width: 76px;
+    }
+
+    .options-wrapper{
+        margin-left: 2px;
+    }
+}
+
+@media (max-width: 384px){
+    .answer-block__descr{
+        line-height: 22px;
+    }
+}
+
+@media (max-width: 376px){
+    .answer-block__player {
+        width: 150px;
+    }
+
+    .next-lvl{
+        margin-left: 42px;
+    }
+}
+
+@media (max-width: 364px){
+    .player {
+        width: 190px;
+    }
+
+    .menu{
+        margin-left: 0px;
+    }
+
+}
+
+@media(max-width: 349px){
+    .game {
+        height: 716px;
+    }
+}

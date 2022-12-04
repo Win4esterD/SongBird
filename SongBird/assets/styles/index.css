@@ -1,0 +1,256 @@
+.welcome{
+    display: block;
+    position: relative;
+    width: 737px;
+    height: 768px;
+    background: rgba(0, 0, 0, 0.7);
+    border-radius: 60px;
+    left: 998px;
+    top: 31px;
+}
+
+.welcome__h1{
+    width: 594px;
+    height: 116px;
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 45px;
+    line-height: 53px;
+    text-align: center;
+    color: #FFFFFF;
+    padding: 62px 0 0 57px;
+}
+
+.game-name{
+    color: rgba(225, 229, 23, 1);
+}
+
+.welcome__p{
+    margin-left: 105px;
+    width: 546px;
+    height: 301px;
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 34px;
+    line-height: 40px;
+    text-align: justify;
+    color: #FFFFFF;
+}
+
+/* .lang{
+    display: flex;
+    margin-left: 102px;
+}
+
+.game-language{
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 34px;
+    line-height: 40px;
+    text-align: justify;
+    color: #FFFFFF;
+} */
+
+#language{
+    width: 50px;
+    height: 50px;
+}
+
+.play-btn{
+    position: relative;
+    width: 394px;
+    height: 103px;
+    background: #FF9901;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 60px;
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 45px;
+    line-height: 53px;
+    text-align: center;
+    color: #FFFFFF;
+    bottom: 200px;
+    left: 180px
+}
+
+.play-btn:hover{
+    cursor: pointer;
+    background: rgb(14, 228, 14);
+}
+
+.play-btn:active{
+    background: rgb(230, 227, 9);
+}
+
+@media(max-width: 1741px){
+    .welcome{
+        left: 49vw;
+    }
+}
+
+@media(max-width: 1453px){
+    .welcome{
+        width: 600px;
+        height: 600px;
+    }
+
+    .welcome__h1{
+        width: 400px;
+        height: 116px;
+        font-size: 2em;
+        padding: 62px 0 0 96px;
+    }
+
+    .welcome__p{
+        margin-left: 105px;
+        width: 400px;
+        height: 301px;
+        font-family: 'Roboto';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 34px;
+        line-height: 40px;
+        text-align: justify;
+        color: #FFFFFF;
+    }
+
+    .play-btn{
+        position: relative;
+        width: 190px;
+        height: 60px;
+        bottom: 251px;
+        font-size: 32px;
+    }
+}
+
+@media (max-width: 1186px){
+    .welcome{
+        width: 460px;
+    }
+
+    .welcome__h1{
+        padding: 62px 0 0 17px;
+    }
+
+    .welcome__p{
+        margin-left: 20px;
+    }
+
+    .play-btn{
+        left: 125px;
+    }
+}
+
+@media(max-width: 986px){
+    .welcome__h1{
+        padding: 62px 0 0 17px;
+        font-size: 26px;
+        width: 379px;
+    }
+
+    .welcome__p{
+        width: 350px;
+        font-size: 26px;
+        margin-left: 45px;
+    }
+
+    .goodluck{
+        margin-top: -40px;
+    }
+}
+
+@media(max-width: 910px){
+    .welcome{
+        width: 410px;
+    }
+
+    .welcome__p{
+        margin-left: 30px;
+    }
+}
+
+@media(max-width:810px){
+    .welcome{
+        left: 353px;
+    }
+}
+
+@media(max-width: 764px){
+    .welcome{
+        left: 330px;
+    }
+}
+
+@media(max-width: 744px){
+    .welcome{
+        width: 100%;
+        left: 0px;
+        background:#231E1E;
+    }
+    .welcome__h1{
+        margin-left: 20vw;
+        padding-top: 15px;
+    }
+
+    .welcome__p {
+        margin-left: 20vw;
+    }
+
+    .play-btn{
+        margin-left: 20vw;
+    }
+}
+
+@media(max-width: 497px){
+    .welcome__h1{
+        width: 314px;
+        margin-left: 10vw;
+    }
+
+    .welcome__p{
+        margin-left: 10vw;
+    }
+
+    .play-btn{
+        margin-left: 8vw;
+    }
+
+}
+
+
+@media (max-width: 392px){
+    .welcome__h1{
+        margin-left: 1vw;
+    }
+
+    .welcome__p{
+        margin-left: 1vw;
+    }
+
+    .play-btn{
+        margin-left: 0px;
+        left: 23vw;
+    }
+}
+
+@media (max-width: 357px){
+    .welcome__h1{
+        margin-left: 0vw;
+    }
+
+    .welcome__p{
+        margin-left: 0vw;
+        width: auto;
+    }
+
+}
+
+@media (max-width: 331px){
+    .welcome__h1{
+        width: auto;
+    }
+}
